@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.divImg {
+    width: 450px;
+    text-align: start;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+.divImg img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.fields {
+    margin-bottom: 10px;
+}
+
+.fields input {
+    width: 100%;
+    height: 27px;
+    margin-top: 14px;
+}
+
+.fields label {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.fields p {
+    margin-top: 0;
+    text-align: start;
+    white-space: pre-line;
+    color: #eaf700;
+}
+
+.buttonSubmit {
+    width: 40%;
+    height: 45px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

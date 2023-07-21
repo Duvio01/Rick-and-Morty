@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    height: 109px;
+    align-items: center;
+    background: rgb(92 208 104 / 67%);
+    margin-bottom: 30px;
+}
+
+.container button {
+    width: 120px;
+    height: 28px;
+    border-radius: 20px;
+    border: 1px solid hsl(var(--primary));
+}
+
+.container img {
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container img:hover{
+    transform: scale(1.1);
+}
+
+.container div {
+    display: flex;
+}

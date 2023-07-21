@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerImg {
+    width: 150px;
+}
+
+.containerImg img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.containerInf {
+    text-align: center;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 15vh;
+    background-color: #2f9030;
+    padding: 1em;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 5%;
+}
+
+.listItem:hover {
+    background-color: #262623c9;
+    color: beige;
+}
+
+.listItem img {
+    width: 50%;
+    object-fit: cover;
+    margin: 15px;
+}

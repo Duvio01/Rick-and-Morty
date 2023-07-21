@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: #333944;
+    border-radius: 20px;
+}
+
+.divImg {
+    width: 245px;
+    text-align: center;
+}
+
+.divImg img {
+    width: 100%;
+    height: auto;
+}
+
+.nameOnImg {
+    position: absolute;
+    margin-top: 200px;
+    font-size: 16px;
+    background-color: black;
+    margin-left: 1%;
+    color: white;
+    padding: 8px;
+}
+
+.divDescripcion {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    
+}
+
+.buttonPosition {
+    position: absolute;
+    margin-left: 221px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+}
+
+.buttonFav {
+    position: absolute;
+    margin-bottom: 276px;
+    margin-right: 212px;
+}
+
+.buttonFav button{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}

@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    margin: 138px 0px;
+}
+
+.container div img {
+    border-radius: 29px;
+}

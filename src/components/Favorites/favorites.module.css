@@ -1,0 +1,15 @@
+.containerSelects{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 50px;
+}
+
+.containerSelects div select {
+    width: 200px;
+    height: 25px;
+}
+
+.divSinContenido {
+    display: flex;
+    justify-content: space-around;
+}
