@@ -22,6 +22,7 @@ export function Card(props) {
          props.removeFav(props.id);
       } else {
          setIsFav(true);
+         console.log(props)
          props.addFav(props);
       }
    };
