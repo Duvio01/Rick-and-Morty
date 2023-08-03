@@ -103,6 +103,7 @@ function App() {
          }
       } catch (error) {
          alert('¡No hay personajes con este ID!')
+         setLoading(false)
       }
    }
 

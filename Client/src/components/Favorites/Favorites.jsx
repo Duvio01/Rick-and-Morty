@@ -29,6 +29,7 @@ const Favorites = (props) => {
                             <div>
                                 <label>Ordenar: </label>
                                 <select onChange={handleOrder}>
+                                    <option value=''></option>
                                     <option value='A'>Ascendente</option>
                                     <option value='D'>Descendente</option>
                                 </select>

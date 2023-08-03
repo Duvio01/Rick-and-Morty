@@ -8,6 +8,18 @@ export function Card(props) {
 
    const [isFav, setIsFav] = useState(false);
 
+   const fontName = props.name.length > 30 ? '8px' : props.name.length > 20 ? '15px' : '16px' 
+
+   const styleName = {
+      position: 'absolute',
+      marginTop: '200px',
+      fontSize: fontName,
+      backgroundColor: 'black',
+      marginLeft: '1%',
+      color: 'white',
+      padding: '8px'
+   }
+
    useEffect(() => {
       props.myFavorites.forEach((fav) => {
          if (fav.id === props.id) {
@@ -22,7 +34,6 @@ export function Card(props) {
          props.removeFav(props.id);
       } else {
          setIsFav(true);
-         console.log(props)
          props.addFav(props);
       }
    };
@@ -49,7 +60,7 @@ export function Card(props) {
             }
 
             <Link to={`/detail/${props.id}`}>
-               <h2 className={style.nameOnImg}>{props.name}</h2>
+               <h2 style={styleName}>{props.id} - {props.name}</h2>
             </Link>
             <img src={props.image} alt="Imagen Rick" />
             <div className={style.divDescripcion}>
