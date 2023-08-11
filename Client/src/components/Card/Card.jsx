@@ -22,7 +22,7 @@ export function Card(props) {
 
    useEffect(() => {
       props.myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
+         if (fav.id === Number(props.id)) {
             setIsFav(true)
          }
       });

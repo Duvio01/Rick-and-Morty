@@ -30,7 +30,7 @@ describe("GET /rickandmorty/login", () => {
     })
 
     it('La informacion de login es incorrecta', async() => {
-        const access = {access: false}
+        const access = {error: "Contraseña incorrecta"}
         const response = await agent.get('/rickandmorty/login?email=jerdate01@gmail.com&password=Pruebas12')
         expect(response.body).toEqual(access)
     })
@@ -39,13 +39,13 @@ describe("GET /rickandmorty/login", () => {
 let character1
 beforeEach(()=>{
     character1 = {
-        id: 1000,
-        name: 'Personaje',
-        species: 'None',
-        gender: 'None',
-        status: 'Pending',
-        origin: 'Planet',
-        image: 'foto.png'
+        id: 1,
+        name: 'Rick Sanchez',
+        species: 'Human',
+        gender: 'Male',
+        status: 'Alive',
+        origin: 'Earth (C-137)',
+        image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
     }
 
     return character1
@@ -53,13 +53,13 @@ beforeEach(()=>{
 
 describe("POST /rickandmorty/fav", () => {
     const character2 = {
-        id: 1002,
-        name: 'Personaje2',
-        species: 'None2',
-        gender: 'None2',
-        status: 'Pending2',
-        origin: 'Planet2',
-        image: 'foto2.png'
+        id: 158,
+        name: 'Hookah Alien',
+        species: 'Alien',
+        gender: 'unknown',
+        status: 'Alive',
+        origin: 'Earth (C-137)',
+        image: 'https://rickandmortyapi.com/api/character/avatar/158.jpeg'
     }
     it('Devuelve el elemento en un array', async()=>{
         const response = await agent.post('/rickandmorty/fav').send(character1)
@@ -75,13 +75,13 @@ describe("POST /rickandmorty/fav", () => {
 
 describe('DELETE /rickandmorty/fav/:id', ()=>{
     const character2 = { 
-        id: 1002,
-        name: 'Personaje2',
-        species: 'None2',
-        gender: 'None2',
-        status: 'Pending2',
-        origin: 'Planet2',
-        image: 'foto2.png'
+        id: 158,
+        name: 'Hookah Alien',
+        species: 'Alien',
+        gender: 'unknown',
+        status: 'Alive',
+        origin: 'Earth (C-137)',
+        image: 'https://rickandmortyapi.com/api/character/avatar/158.jpeg'
     }
 
     it('Devuelve un arreglo si no se elimina ningun personaje', async()=> {
@@ -91,7 +91,7 @@ describe('DELETE /rickandmorty/fav/:id', ()=>{
     })
 
     it('Elimina correctamente al personaje con el ID especificado', async()=> {
-        const response = await agent.delete('/rickandmorty/fav/1000') 
+        const response = await agent.delete('/rickandmorty/fav/1') 
         expect(response.body).toContainEqual(character2)
     })
 })

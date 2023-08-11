@@ -27,7 +27,6 @@ function App() {
    let imagenFont = access ? backgroundHome : backgroundLogin
 
    let imagenHeight
-   // let imagenHeight = characters.length > 5 && (location.pathname === '/home' || location.pathname === '/favorites') ? '' : '100vh'
 
    if (location.pathname === '/home') {
       if (characters.length > 5) {
@@ -63,7 +62,7 @@ function App() {
          setAccess(response.data);
          
       } catch (error) {
-         alert('Datos invalidos')
+         alert(error.response.data.error)
       }
    }
 
@@ -96,7 +95,6 @@ function App() {
                const response = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
                   setCharacters([...characters, response.data])
                   setLoading(false)
-                  // setCharacters((oldChars) => [...oldChars, data]);
             }
          } else {
             alert('Debe indicar un id')
@@ -110,7 +108,8 @@ function App() {
    const onClose = (id) => {
       const filterCharacter = characters.filter(character => character.id !== id)
       setCharacters(filterCharacter)
-      dispatch(removeFav(id))
+      const isFavorite = stateGlobal.myFavorites.find((character) => character.id === Number(id))
+      if(isFavorite) dispatch(removeFav(id))
    }
 
    return (
